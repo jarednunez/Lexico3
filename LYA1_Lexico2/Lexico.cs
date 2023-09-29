@@ -104,57 +104,7 @@ namespace LYA1_Lexico2
                         setClasificacion(Tipos.Caracter);
                         estado = F;
                         break;
-                    case 9:
-                        setClasificacion(Tipos.Asignacion);
-                        if (c == '=')
-                        estado = 8;
-                        else  
-                    estado = F;
-                        break;
-                    case 10:
-                        setClasificacion(Tipos.OperadorRelacional);
-                        if (c == '=')
-                                estado = 9;
-                        else 
-                                estado = F;
-                        break;
-                    case 11:
-                        setClasificacion(Tipos.FinSentencia);
-                        if (c == ';')
-                                estado = 10;
-                        else 
-                                estado = F;
-                        break; 
-                    case 12:
-                        setClasificacion(Tipos.Caracter);
-                        if (c == '&')
-                                estado = 11;
-                        else if (c == '|')
-                                estado = 12;
-                        else 
-                                estado = F;
-                        break;
-                    case 13: 
-                        setClasificacion(Tipos.OperadorLogico);
-                    if (c == '&'||c == '|')
-                                estado = 13;
-                        else 
-                                estado = F;
-                        break;
-                    case 14:
-                        setClasificacion(Tipos.OperadorLogico);
-                        if (c == '!')
-                                estado = 13;
-                        else 
-                                estado = F;
-                        break;
-                    case 15:
-                        setClasificacion(Tipos.OperadorRelacional);
-                        if (c == '=')
-                                estado = 15;
-                        else 
-                                estado = F;
-                        break;
+                   
         
                 }
                 if (estado >= 0)
