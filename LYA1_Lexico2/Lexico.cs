@@ -103,17 +103,21 @@ namespace LYA1_Lexico2
                             estado = F;
                         break;
                     case 8:
-                        setClasificacion(Tipos.Caracter);
+                        setClasificacion(Tipos.Asignacion);
+                        if (c == '=')
+                        estado = 9;
                         estado = F;
                         break;
                     case 9:
-                        setClasificacion(Tipos.Asignacion);
-                        if (c==';')
-                            estado = 9;
-                        else 
-                            estado =F;
-                    break;
-                   
+                        setClasificacion(Tipos.OperadorRelacionales);
+                        estado = F;
+                        break;
+
+                    case 10:
+                        setClasificacion(Tipos.FinSentencia);
+                        estado = F;
+                        break;
+                     
         
                 }
                 if (estado >= 0)
