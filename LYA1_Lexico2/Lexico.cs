@@ -53,7 +53,7 @@ namespace LYA1_Lexico2
                              estado = 10;
                         else if (c == ';')
                              estado = 10;
-                        else if (c == '&' || c == '|' || c == '!')
+                        else if (c == '&') //|| c == '|' || c == '!')
                              estado = 15;
                         else  
                             estado = 34;
