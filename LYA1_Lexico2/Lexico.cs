@@ -49,14 +49,8 @@ namespace LYA1_Lexico2
                             estado = 1;
                         else if (char.IsDigit(c))
                             estado = 2;
-                        else if (c == '=')
-                             estado = 10;
-                        else if (c == ';')
-                             estado = 10;
-                        else if (c == '&') //|| c == '|' || c == '!')
-                             estado = 15;
                         else  
-                            estado = 34;
+                            estado = 8;
                         break;
                     case 1:
                         setClasificacion(Tipos.Identificador);
