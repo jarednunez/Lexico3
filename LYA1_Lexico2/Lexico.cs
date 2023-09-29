@@ -49,6 +49,8 @@ namespace LYA1_Lexico2
                             estado = 1;
                         else if (char.IsDigit(c))
                             estado = 2;
+                        else if (c==';')
+                            estado = 10;
                         else  
                             estado = 8;
                         break;
@@ -104,6 +106,13 @@ namespace LYA1_Lexico2
                         setClasificacion(Tipos.Caracter);
                         estado = F;
                         break;
+                    case 9:
+                        setClasificacion(Tipos.Asignacion);
+                        if (c==';')
+                            estado = 9;
+                        else 
+                            estado =F;
+                    break;
                    
         
                 }
