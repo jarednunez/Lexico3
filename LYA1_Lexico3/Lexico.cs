@@ -62,15 +62,7 @@ namespace LYA1_Lexico3
                 return 6;
             else
                 return 7;
-        }
-        private void clasificar(int estado)
-        {
-            switch (estado)
-            {
-                case 1: setClasificacion(Tipos.Identificador); break;
-                case 2: setClasificacion(Tipos.Numero); break;
-                case 8: setClasificacion(Tipos.Caracter); break;
-            }
+            
         }
         public void nextToken()
         {
@@ -82,10 +74,9 @@ namespace LYA1_Lexico3
             while (estado >= 0)
             {
                 c = (char)archivo.Peek();
-
-                estado = TRAND[estado,columna(c)];
-                clasificar(estado);
                 
+                estado = TRAND[estado,columna(c)];
+
                 if (estado >= 0)
                 {
                     if (estado > 0)
@@ -94,10 +85,6 @@ namespace LYA1_Lexico3
                     }
                     archivo.Read();
                 }
-            }
-            if (estado == E)
-            {
-                throw new Error("Lexico: Se espera un digito",log);
             }
             setContenido(buffer);
             log.WriteLine(getContenido() + " = " + getClasificacion());
