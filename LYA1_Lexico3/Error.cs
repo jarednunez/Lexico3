@@ -10,6 +10,7 @@ namespace LYA1_Lexico3
         public Error(string mensaje, StreamWriter log) : base(mensaje)
         {
             log.WriteLine("Error "+mensaje);
+        
         }
     }
 }

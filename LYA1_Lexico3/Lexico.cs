@@ -137,6 +137,7 @@ namespace LYA1_Lexico3
         public bool FinArchivo()
         {
             return archivo.EndOfStream;
+            
         }
     }
 }
