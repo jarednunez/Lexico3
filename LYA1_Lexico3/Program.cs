@@ -1,3 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-hbh
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace LYA1_Lexico3
+{
+    class Program
+    {
+        static void Main(string[] args) 
+        {
+            try
+            {
+                using (Lexico L = new Lexico())
+                {
+                    while (!L.FinArchivo())
+                    {
+                        L.nextToken();
+                    }
+                }
+            } 
+            catch (Exception e)
+            {
+                Console.WriteLine("Error "+e.Message);
+            }
+
+        }
+    }
+}
