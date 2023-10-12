@@ -48,5 +48,7 @@ mundo = Identificador
 " = Asignacion
 " = Asignacion
 " = Asignacion
+/ = Asignacion
+* = Asignacion
 } = Asignacion
 ￿ = Asignacion
