@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LYA1_Lexico3
 {
-    public class Token
+        public class Token
     {
         public enum Tipos
         {

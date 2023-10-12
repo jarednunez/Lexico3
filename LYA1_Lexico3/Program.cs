@@ -23,7 +23,7 @@ namespace LYA1_Lexico3
             {
                 Console.WriteLine("Error "+e.Message);
             }
-            
+
         }
     }
 }
