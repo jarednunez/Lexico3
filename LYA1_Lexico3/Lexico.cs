@@ -107,8 +107,10 @@ namespace LYA1_Lexico3
                 return 18;
             else if (c == '\"')
                  return 19;
+             else if (c == '\"')
+                 return 20;
             else if (c == '/')
-                return 20;
+                return 21;
                 else 
                 return 7;
         }
