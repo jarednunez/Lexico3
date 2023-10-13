@@ -35,11 +35,11 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F,F}, // 15
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F,F}, // 16
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, 16,F, F,F}, // 17
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F}, // 18
-            {F,F,F,F,F,21,F, F,F,F, F, F, F, F,  F, F, F,F}, // 19
+            {F,F,F,F,F,F, F, F,F,F, F, F,   F, F, F, F, F,F}, // 18
+            {F,F,F,F,F,21,F, F,F,F, F, F,  F, F,  F, F, F,F}, // 19
             {F,F,F,F,F,F,21, F,F,F, F, F,  F, F, F, F,F,F}, // 20
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F}, // 21
-            {F,F,F,F,F,F, F, F,23,F, F, F  ,F, F, F,23,23,23}, // 22
+            {F,F,F,F,F,F, F, F,23,F, F, F ,F, F, F,23,23,23}, // 22
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F}, // 23
          };
         public Lexico()
@@ -93,7 +93,7 @@ namespace LYA1_Lexico3
                 return 15;
             else if (c=='-')
                 return 16;
-            else if (c=='%')
+            else if (c=='%'||c=='*')
                 return 17;
                 else 
                 return 7;
