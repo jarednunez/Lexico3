@@ -120,6 +120,7 @@ namespace LYA1_Lexico3
                 case 21 : setClasificacion(Tipos.InTermino);break;
                 case 22 : setClasificacion(Tipos.OpFactor);break;
                 case 23 : setClasificacion(Tipos.InFactor);break;
+                case 24 : setClasificacion(Tipos.OpTernario);break;
 
             }
         }
