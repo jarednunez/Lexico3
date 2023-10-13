@@ -82,9 +82,9 @@ namespace LYA1_Lexico2
                         else if (c == '\"')
                             estado = 27;
                         else if (c == '{')
-                        estado = 27;
+                            estado = 27;
                         else if (c == '}')
-                        estado = 27;
+                            estado = 27;
                         else
                             estado = 8;
                         break;
@@ -242,21 +242,14 @@ namespace LYA1_Lexico2
                         break;
                     case 26:
                         setClasificacion(Tipos.Cadena);
-                        estado = 27;
-                        if (FinArchivo())
+                        if (c == '\"')
+                        estado =27;
+                     if (FinArchivo())
                             estado = E;
                         else
                             estado = F;
                         break;
-                        case 27:
-                    estado = F;
-                    break;
-                      case 28:
-                        setClasificacion(Tipos.inicio);
-                        if (c=='{')
-                        estado = F;
-                        else if (c=='}')
-                        setClasificacion(Tipos.Fin);
+                    case 27:
                         estado = F;
                         break;
 
