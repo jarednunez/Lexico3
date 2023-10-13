@@ -40,7 +40,7 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 21
             {F,F,F,F,F,F, F, F,23,F, F, F ,F, F, F,23,23,23,F}, // 22
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 23
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 23
+            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 24
          };
         public Lexico()
         {
