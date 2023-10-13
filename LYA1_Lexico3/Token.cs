@@ -5,11 +5,12 @@ using System.Threading.Tasks;
 
 namespace LYA1_Lexico3
 {
-        public class Token
+    public class Token
     {
         public enum Tipos
         {
-            Identificador,Numero,Caracter,Asignacion, OpRelacional,FinSentencia, OpLogico,
+        Identificador,Numero,Caracter,Asignacion, OpRelacional,FinSentencia, OpLogico,
+            OpTermino, InTermino 
         }
         private string contenido;
         private Tipos  clasificacion;

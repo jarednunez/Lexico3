@@ -14,7 +14,7 @@ namespace LYA1_Lexico3
         private StreamReader archivo;
         private StreamWriter log;
 
-    int[,] TRAND =  
+       int[,] TRAND =
         {
         //  WS,L,D,.,E,+,-,La
             {0,1,2,8,1,8,8,8,8,10,11,12,13,17,16}, // 0
@@ -26,7 +26,7 @@ namespace LYA1_Lexico3
             {E,E,7,E,E,E,E,E,F,F,F,F,F,F,F},// 6
             {F,F,7,F,F,F,F,F,F,F,F,F,F,F,F}, // 7
             {F,F,F,F,F,F,F,F,9,F,F,F,F,F,F},// 8
-            {F,F,F,F,F,F,F,F,F,F,F,F,F,F,F},// 9
+            {F,F,F,F,F,F,F,F,F,F,F,F,F,F,F}, //9
             {F,F,F,F,F,F,F,F,F,F,F,F,F,F,F}, // 10
             {F,F,F,F,F,F,F,F,F,F,14,F,F,F,F}, // 11
             {F,F,F,F,F,F,F,F,F,F,F,14,F,F,F}, // 12
@@ -102,6 +102,7 @@ namespace LYA1_Lexico3
                 case 14: setClasificacion(Tipos.OpLogico); break;
                 case 16: setClasificacion(Tipos.OpRelacional); break;
                 case 17: setClasificacion(Tipos.OpRelacional);break;
+
             }
         }
         public void nextToken()
