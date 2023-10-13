@@ -95,6 +95,8 @@ namespace LYA1_Lexico3
                 return 16;
             else if (c=='%'||c=='*')
                 return 17;
+            else if (c=='?')
+                return 18;
                 else 
                 return 7;
         }
