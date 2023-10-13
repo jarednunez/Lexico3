@@ -29,7 +29,6 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F, F}, //9
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F, F}, // 10
             {F,F,F,F,F,F, F, F,F,F, 14,F,  F, F, F,F, F, F, F}, // 11
-            {F,F,F,F,F,F, F, F,F,F, F, 14, F, F, F,F, F, F, F}, // 12
             {F,F,F,F,F,F, F, F,9,F, F, F,  F, F, F,F, F, F, F}, // 13
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F, F}, // 14
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F, F}, // 15
@@ -41,7 +40,7 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 21
             {F,F,F,F,F,F, F, F,23,F, F, F ,F, F, F,23,23,23,F}, // 22
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 23
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 24
+            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, F}, // 23
          };
         public Lexico()
         {

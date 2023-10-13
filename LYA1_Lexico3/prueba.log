@@ -60,7 +60,6 @@ Vacia = Identificador
 *= = InFactor
 /= = OpRelacional
 %= = InFactor
-? = OpTernario
 } = Asignacion
 " = Asignacion
 ￿ = Asignacion
