@@ -244,7 +244,7 @@ namespace LYA1_Lexico2
                         setClasificacion(Tipos.Cadena);
                         if (c == '\"')
                         estado =27;
-                     if (FinArchivo())
+                       if (FinArchivo())
                             estado = E;
                         else
                             estado = F;
