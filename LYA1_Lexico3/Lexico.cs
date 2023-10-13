@@ -29,6 +29,7 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F, F}, //9
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F, F}, // 10
             {F,F,F,F,F,F, F, F,F,F, 14,F,  F, F, F,F, F, F, F}, // 11
+            {F,F,F,F,F,F, F, F,F,F, F, 14, F, F, F,F, F, F, F}, // 12
             {F,F,F,F,F,F, F, F,9,F, F, F,  F, F, F,F, F, F, F}, // 13
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F, F}, // 14
             {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F, F}, // 15
