@@ -16,7 +16,7 @@ namespace LYA1_Lexico3
 
    int[,] TRAND =
         {
-        //  WS,L,D,.,E,+,-,La,=,;,&, |,  !, <, >,  %, *, ?, ",    /
+        //  WS,L,D,.,E,+,-,La,=,;,&, |,  !, <, >,  %, *, ?, ",    /.  {  }
             {0,1,2,8,1,19,20,8,8,10,11,12,13,17,16,22,22,24,25,27,28,32,33}, // 0
             {F,1,1,F,1,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 1
             {F,F,2,3,5,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 2
@@ -28,29 +28,29 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,9,F, F, F, F, F, F, F, F, F,  F,F, F,F, F},// 8
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, //9
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 10
-            {F,F,F,F,F,F, F, F,F,F, 14,F,  F, F, F,F, F, F,  F,F, F,F, F}, // 11
-            {F,F,F,F,F,F, F, F,F,F, F, 14, F, F, F,F, F, F,  F,F, F,F, F}, // 12
-            {F,F,F,F,F,F, F, F,9,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 13
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 14
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 15
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 16
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, 16,F,F, F,  F,F, F,F, F}, // 17
+            {F,F,F,F,F,F, F, F,F,F, 14,F, F, F, F, F, F, F,  F,F, F,F, F}, // 11
+            {F,F,F,F,F,F, F, F,F,F, F, 14,F, F, F, F, F, F,  F,F, F,F, F}, // 12
+            {F,F,F,F,F,F, F, F,9,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 13
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 14
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 15
+            {F,F,F,F,F,F, F, F,9,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 16
+            {F,F,F,F,F,F, F, F,9,F, F, F, F, F, 16,F, F, F,  F,F, F,F, F}, // 17
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 18
-            {F,F,F,F,F,21,F, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 19
-            {F,F,F,F,F,F,21, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 20
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F,F, F, F,  F,F, F,F, F}, // 21
-            {F,F,F,F,F,F, F, F,23,F, F, F ,F, F, F,23,23,F,  F,F, F,F, F}, // 22
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F,  F,F, F,F, F}, // 23
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,24,  F,F, F,F, F}, // 24
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F, 26,F, F,F, F}, // 25
-            {F,F,F,F,27,F, F, F,F,F, F, F, F, F, F, F, F,F,  F,F, F,F, F}, // 26
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F,  F,F, F,F, F}, // 27
-            {F,F,F,F,F,F, F, F,23,F, F, F,  F, F, F,F, F,F, F,F, 23,F, F}, // 28
-            {29,F,F,F,F,F, F,F,F,F, F, F,  F, F, F, F, F,F,  F,F, F,F, F}, // 29
-            {F,F,F,F,30,F, F,F,F,F, F, F,  F, F, F, F,22,F, F,F, F,F, F}, // 30
-            {31,F,F,F,F,F, F,F,F,F, F,F,   F, F, F, F,22,F,F,F,31,F, F}, // 31
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F,  F,F, F,F, F}, // 32
-            {F,F,F,F,F,F, F, F,F,F, F, F,  F, F, F, F, F,F,  F,F, F,F, F}, // 33
+            {F,F,F,F,F,21,F, F,21,F,F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 19
+            {F,F,F,F,F,F,21, F,21,F,F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 20
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 21
+            {F,F,F,F,F,F, F, F,23,F,F, F ,F, F, F,23,23, F,  F,F, F,F, F}, // 22
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 23
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 24
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  25,F,F,F, F}, // 25
+            {F,F,F,F,27,F, F, F,F,F,F, F, F, F, F, F, F, F,  27,F, F,F, F}, // 26
+            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 27
+            {F,F,F,F,F,F, F, F,23,F,F, F, F, F, F, F, F, F,  F,F, 23,F,F}, // 28
+            {29,F,F,F,F,F, F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F, F,F}, // 29
+            {F,F,F,F,30,F, F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F, F,F}, // 30
+            {31,F,F,F,F,F, F,F,F,F, F, F, F, F, F, F, F, F,  F,F,31,F, F}, // 31
+            {F,F,F,F,F,F,  F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 32
+            {F,F,F,F,F,F,  F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 33
          };
         public Lexico()
         {
@@ -104,11 +104,11 @@ namespace LYA1_Lexico3
             else if (c=='-')
                 return 16;
             else if (c=='%'||c=='*')
-                return 17;
+                return 20;
             else if (c=='?')
-                return 18;
+                return 17;
             else if (c == '\"')
-                 return 19;
+                 return 18;
             else if (c == '/')
                 return 20;
             else if (c == '}')
