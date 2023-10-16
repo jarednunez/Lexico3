@@ -34,10 +34,7 @@ Test = Identificador
 <> = OpRelacional
 > = OpRelacional
 > = OpRelacional
-" = cadena
-Hola = Identificador
-mundo = Identificador
-" = cadena
+"Hola mundo" = cadena
 ; = FinSentencia
 /* = InFactor
 Cadena = Identificador
@@ -52,5 +49,3 @@ Vacia = Identificador
 %= = InFactor
 ? = OpTernario
 } = Fin
-" = cadena
-￿ = Asignacion

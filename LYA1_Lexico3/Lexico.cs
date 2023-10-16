@@ -17,7 +17,7 @@ namespace LYA1_Lexico3
    int[,] TRAND =
         {
         //  WS,L,D,.,E,+,-,La,=,;,&, |,  !, <, >,  %, *, ?, ",    /.  {  }
-            {0,1,2,8,1,19,20,8,8,10,11,12,13,17,16,22,22,24,25,27,28,32,33}, // 0
+            {0,1,2,8,1,19,20,8,8,10,11,12,13,17,16,22,22,24,25,26,28,32,33}, // 0
             {F,1,1,F,1,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 1
             {F,F,2,3,5,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 2
             {E,E,4,E,E,E, E, E,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 3
@@ -42,8 +42,8 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,F, F, F,23,F,F, F ,F, F, F,23,23, F,  F,F, F,F, F}, // 22
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 23
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 24
-            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  25,F,F,F, F}, // 25
-            {F,F,F,F,27,F, F, F,F,F,F, F, F, F, F, F, F, F,  27,F, F,F, F}, // 26
+            {25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,25,25,25, 25}, // 25
+            {F,F,F,F,F,F, F, F,F,F,F, F, F, F, F, F, F, F,   F,F, F,F, F}, // 26
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F}, // 27
             {F,F,F,F,F,F, F, F,23,F,F, F, F, F, F, F, F, F,  F,F, 23,F,F}, // 28
             {29,F,F,F,F,F, F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F, F,F}, // 29
@@ -99,22 +99,18 @@ namespace LYA1_Lexico3
                 return 13;
             else if (c=='>')
                 return 14;
-            else if (c=='+')
-                return 15;
-            else if (c=='-')
-                return 16;
             else if (c=='%'||c=='*')
-                return 20;
+                return 15;
             else if (c=='?')
                 return 17;
             else if (c == '\"')
-                 return 18;
-            else if (c == '/')
-                return 20;
+                return 18;
+            else if (c=='/')
+                return 15;
             else if (c == '}')
-                return 21;
+                return 20;
             else if (c == '{')
-                return 22;
+                return 21;
                 else 
                 return 7;
 
@@ -140,12 +136,12 @@ namespace LYA1_Lexico3
                 case 22 : setClasificacion(Tipos.OpFactor);break;
                 case 23 : setClasificacion(Tipos.InFactor);break;
                 case 24 : setClasificacion(Tipos.OpTernario);break;
-                case 25 : setClasificacion (Tipos.cadena );break;
-                case 26: setClasificacion (Tipos.cadena);break;
-                case 27 : setClasificacion (Tipos.Caracter);break;
-                case 28 :setClasificacion (Tipos.OpFactor);break;
-                case 32: setClasificacion (Tipos.Fin);break;
-                case 33: setClasificacion (Tipos.Inicio);break;
+                case 25: setClasificacion(Tipos.cadena);break;
+                case 26 : setClasificacion(Tipos.cadena);break;
+                case 27 : setClasificacion( Tipos.cadena); break;
+                case 32 : setClasificacion(Tipos.Inicio);break;
+                case 28 : setClasificacion(Tipos.Fin);break;
+
 
             }
         }
