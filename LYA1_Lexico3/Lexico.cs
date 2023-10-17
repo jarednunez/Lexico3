@@ -39,18 +39,18 @@ namespace LYA1_Lexico3
             {F,F,F,F,F,21,F, F,21,F,F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 19
             {F,F,F,F,F,F,21, F,21,F,F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 20
             {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 21
-            {F,F,F,F,F,F, F, F,23,F,F, F ,F, F, F,23,23, F,  F,F, F,F, F,F,F}, // 22
-            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 23
-            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 24
-            {25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,25,25,25,25,E,F}, // 25
-            {F,F,F,F,F,F, F, F,F,F,F, F, F, F, F, F, F, F,   F,F, F,F, F,F,F}, // 26
-            {F,F,F,F,F,F, F, F,F,F, F, F, F, F, F, F, F,F,   F,F, F,F, F,F,F}, // 27
+            {F, F, F, F, F,F, F, F,23,F,F, F ,F, F, F,23,23, F,  F,F, F,F, F,F,F}, // 22
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 23
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 24
+            {25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26, 25,25,25,25,E,F}, // 25
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 26
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 27
             {F, F, F, F, F, F, F, F, 23,F, F, F, F, F, F, F, F, 30, F, F,29, F,F, F, F}, // 28
             {29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,29,0}, // 29
             {30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,31,30,30,30,31,30,E,30}, // 30
             {30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,31,30,30,0, 30,30,E,30}, // 31
-            {F,F,F,F,F,F,  F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 32
-            {F,F,F,F,F,F,  F,F,F,F, F, F, F, F, F, F, F, F,  F,F, F,F, F,F,F}, // 33
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 27
+            {F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F, F,  F, F, F, F, F, F,F}, // 27
          };
         public Lexico()
         {
@@ -111,6 +111,10 @@ namespace LYA1_Lexico3
                 return 20;
             else if (c == '{')
                 return 21;
+            else if (FinArchivo())
+                return 22;
+            else if (c == '\n')
+                return 0;
                 else 
                 return 7;
 
@@ -164,6 +168,9 @@ namespace LYA1_Lexico3
                     if (estado > 0)
                     {
                         buffer += c;    
+                    }
+                    else {
+                        buffer = ""; 
                     }
                     archivo.Read();
                 }
